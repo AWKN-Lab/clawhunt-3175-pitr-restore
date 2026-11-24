@@ -102,3 +102,9 @@ bash tests/run_all.sh # 参数校验 + dry-run + 单元测试 + 本地完整演�
 见 `ACCEPTANCE.md` 与 `docs/restore-drill.md` §7：验收 1 与验收 3
 须真实云实例与堡垒机，本机没有，未执行；真实 test 环境演练须客户方
 在运维节点按手册执行，演练记录与白名单截图到时补进 `docs/drills/`。
+
+## 投标提案
+
+- 最终版：`docs/bid-proposal-v2.md`（v1 见 `docs/bid-proposal-v1.md`，复核记录见 `docs/GPT-review.md`）。
+- GPT 两轮复核均通过（第一轮修改后 GO，第二轮 GO），报价 $130.50（参考价 $145 的 90%），净额 $97.87。
+- 当前状态：未投出。投标渠道待通（161 未通，平台写操作走 161 受控通道），渠道恢复后按 v2 投出。
