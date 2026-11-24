@@ -1,0 +1,20 @@
+PASS: 缺 --target-time（云模式） (exit 2)
+PASS: prod 环境拒绝 (exit 2)
+PASS: 非法实例名（大写） (exit 2)
+PASS: 非法实例名（太短） (exit 2)
+PASS: 非法目标时间 (exit 2)
+PASS: 未来目标时间拒绝 (exit 2)
+PASS: 超出保留期拒绝 (exit 2)
+PASS: 缺源实例 ID (exit 2)
+PASS: 缺堡垒机 CIDR (exit 2)
+PASS: 非法堡垒机 CIDR (exit 2)
+PASS: 缺地域 (exit 2)
+PASS: 未知参数拒绝 (exit 2)
+PASS: dry-run 打印 CloneDBInstance
+PASS: dry-run 北京时间 10:00 转 UTC 02:00
+PASS: dry-run 带时区输入换算一致
+PASS: dry-run 打印白名单收紧调用
+PASS: dry-run 白名单只含堡垒机 CIDR
+PASS: 本地备份缺目标目录 (exit 2)
+PASS: 本地恢复缺目标时间 (exit 2)
+test_pitr_dryrun: ALL PASS

@@ -1,0 +1,104 @@
+{
+  "checked_at_utc": "2026-11-24T00:47:13Z",
+  "database": "app_db",
+  "failed_tables": [
+    "members"
+  ],
+  "host": "127.0.0.1",
+  "port": "5434",
+  "result": "FAIL",
+  "snapshot_file": "/tmp/pg3175-test/snapshot-after.json",
+  "snapshot_generated_at_utc": "2026-11-24T00:47:09Z",
+  "tables": {
+    "members": {
+      "actual": {
+        "columns": [
+          "id",
+          "org_id",
+          "site_id",
+          "company_name",
+          "contact_name",
+          "created_at",
+          "created_by",
+          "updated_at",
+          "deleted_at"
+        ],
+        "count": 3,
+        "count_hashed_rows": 3,
+        "limit": 1000,
+        "max_updated_at": "2026-11-24T00:46:53.029606+00",
+        "max_updated_at_skipped": false,
+        "order_by": "id",
+        "row_hash": "4246392731f8109a6835ce20a609b444b4ab88d9705afad4426d5827fc5ca175"
+      },
+      "diffs": [
+        "count: snapshot=4 actual=3",
+        "max_updated_at: snapshot=2026-11-24T00:47:05.579267+00 actual=2026-11-24T00:46:53.029606+00",
+        "row_hash mismatch (first 1000 rows by id differ)"
+      ],
+      "snapshot": {
+        "columns": [
+          "id",
+          "org_id",
+          "site_id",
+          "company_name",
+          "contact_name",
+          "created_at",
+          "created_by",
+          "updated_at",
+          "deleted_at"
+        ],
+        "count": 4,
+        "count_hashed_rows": 4,
+        "limit": 1000,
+        "max_updated_at": "2026-11-24T00:47:05.579267+00",
+        "max_updated_at_skipped": false,
+        "order_by": "id",
+        "row_hash": "0d5eeb45f5424da6cce800eea9b007f4673bc8885c0bb1abf6b53b94141c7d9c"
+      },
+      "status": "FAIL"
+    },
+    "sop_items": {
+      "actual": {
+        "columns": [
+          "id",
+          "org_id",
+          "site_id",
+          "title",
+          "created_at",
+          "created_by",
+          "updated_at",
+          "deleted_at"
+        ],
+        "count": 2,
+        "count_hashed_rows": 2,
+        "limit": 1000,
+        "max_updated_at": "2026-11-24T00:46:53.030448+00",
+        "max_updated_at_skipped": false,
+        "order_by": "id",
+        "row_hash": "41a6b1e24ba8130435abc4f7c4b53178681e4e6b8bb656e84ce7ce7a0796807f"
+      },
+      "diffs": [],
+      "snapshot": {
+        "columns": [
+          "id",
+          "org_id",
+          "site_id",
+          "title",
+          "created_at",
+          "created_by",
+          "updated_at",
+          "deleted_at"
+        ],
+        "count": 2,
+        "count_hashed_rows": 2,
+        "limit": 1000,
+        "max_updated_at": "2026-11-24T00:46:53.030448+00",
+        "max_updated_at_skipped": false,
+        "order_by": "id",
+        "row_hash": "41a6b1e24ba8130435abc4f7c4b53178681e4e6b8bb656e84ce7ce7a0796807f"
+      },
+      "status": "PASS"
+    }
+  }
+}

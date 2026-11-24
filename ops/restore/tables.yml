@@ -1,0 +1,24 @@
+# tables.yml — 恢复演练要校验的表（ClawHunt #3175）。
+#
+# 格式约定（verify_restore.py 只认这个固定形状）：
+#   tables:
+#     - name: <表名，可带一个 schema 前缀，如 public.members>
+#       columns: [<按固定顺序列出的列，必须全在表里>]
+#       order_by: <排序列，默认 id>
+#       limit: <参与哈希的前 N 行，默认 1000>
+#
+# 校验口径（写进快照与报告）：
+#   * 行数：只算 deleted_at IS NULL 的行（平台软删除约定）。
+#   * 行哈希：按 order_by 排序的前 limit 行，每行各列转文本后 SHA-256。
+#   * max_updated_at：同口径下的最大值；表里没 updated_at 列时记 null。
+# 表结构贴合平台统一约定（id UUID、org_id、site_id、created_at、
+# created_by、updated_at、deleted_at），种子数据见 tests/fixtures/。
+tables:
+  - name: members
+    columns: [id, org_id, site_id, company_name, contact_name, created_at, created_by, updated_at, deleted_at]
+    order_by: id
+    limit: 1000
+  - name: sop_items
+    columns: [id, org_id, site_id, title, created_at, created_by, updated_at, deleted_at]
+    order_by: id
+    limit: 1000
